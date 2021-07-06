@@ -24,6 +24,7 @@ To use this enviroment we require at least...:
 sudo apt-get build-dep -y qemu
 sudo apt-get install -y libfdt-dev flex bison git apt-utils
 sudo apt-get install -y python3-yaml wget qemu-efi-aarch64 qemu-utils genisoimage qemu-user-static
+sudo apt-get install -y libpixman-1-dev
 
 ====================
 3. LISA-QEMU INSTALL
