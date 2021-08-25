@@ -8,6 +8,7 @@ To use this enviroment we require at least...:
     2. Require more than 70GB free space.
     3. At least have 2 CPU or more.
     4. At least have 2GB free memory.
+    5. Do not use WSL; compilation could be failed with trimming character errors. Use other VMs instead.
 
 ================================
 1. CROSS_COMPILE toolchain setup
@@ -58,6 +59,7 @@ To install lisa-qemu please follow orders in TOPDIR.
     3. git clone https://github.com/torvalds/linux.git && mv linux src
     4. cd TOPDIR
     5. make config-kernel
+       Or, do 'pushd $TOPDIR/linux/src && ARCH=arm64 make menuconfig'. This will create default configuration for kernel.
     6. make build-kernel
     7. make install-kernel-headers
     8. make package-kernel (this makes debian package)

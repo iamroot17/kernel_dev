@@ -42,7 +42,7 @@ config-kernel: init_system_root
 	@cp $(TOPDIR)/conf/default-config.aarch64 $(KERNEL_SRC)/src/.config
 
 
-build-kernel: config-kernel
+build-kernel: 
 	$(MAKE) -C $(KERNEL_SRC)/src V=1 all $(JOBS_CORE)
 	$(MAKE) -C $(KERNEL_SRC)/src INSTALL_HDR_PATH=$(SYSTEM_ROOT_USR) headers_install
 
